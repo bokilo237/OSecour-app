@@ -1,0 +1,41 @@
+@tailwind utilities;
+@import "tailwindcss";
+@import 'leaflet/dist/leaflet.css';
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
+
+
+/* Animations personnalisées */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradient-wave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+
+
+
+.animate-file-upload {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+ 
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Animation du carousel Hero */
+.hero-carousel-slide {
+  animation: fadeInOut 15s infinite;
+}

@@ -1,0 +1,69 @@
+{
+    "header": {
+      "home": "Home",
+      "services": "Services",
+      "app": "App",
+      "map": "Map",
+      "testimonials": "Testimonials",
+      "contact": "Contact",
+      "download": "Download"
+    },
+    "hero": {
+      "title": "Your #1 Emergency Health Companion",
+      "subtitle": "Instantly connect with nearest qualified health professionals"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Complete range for rapid assistance",
+      "location": "Health Agents Location",
+      "locationDesc": "Quickly find medical professionals",
+      "contact": "Direct Connection",
+      "profile": "Shared Medical Profile",
+      "tracking": "Personalized Tracking",
+      "emergency": "Emergency Assistance"
+    },
+    "testimonials": {
+      "title": "What Our Users Say",
+      "subtitle": "Real experiences in emergency situations",
+      "user": "User",
+      "doctor": "Doctor",
+      "nurse": "Nurse"
+    },
+    "app": {
+      "title": "Mobile application for immmediate emergency assistance",
+      "description": "Our application Ôsecour is designed to put you in touch with qualified healthcare workers who are ready to intervene quickly in an emergency. With intuitive interface and essentials functionnalities, everything has been designed to guarantee immediate assistance."
+    },
+    "map": {
+      "title": "Nearby Health Agents",
+      "subtitle": "Visualize available professionals",
+      "doctors": "Doctors",
+      "nurses": "Nurses",
+      "instruction": "Click marker for details",
+      "contact": "Contact"
+    },
+    "cta": {
+      "title": "Ready to Get Help?",
+      "subtitle": "Download the app now"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Questions? We're here to help",
+      "formTitle": "Send Message",
+      "infoTitle": "Contact Info",
+      "agentTitle": "Become Agent",
+      "benefit1": "Increase Visibility",
+      "benefit2": "Easy Management",
+      "benefit3": "Secure Payments",
+      "ctaButton": "Join Our Network"
+    },
+    "footer": {
+      "rights": "All rights reserved",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    },
+    "errors": {
+      "required": "This field is required",
+      "email": "Invalid email",
+      "phone": "Invalid phone format"
+    }
+  }

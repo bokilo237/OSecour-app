@@ -1,0 +1,92 @@
+{
+    "header": {
+      "home": "Accueil",
+      "services": "Services",
+      "app": "Application",
+      "map": "Carte",
+      "testimonials": "Témoignages",
+      "contact": "Contact",
+      "download": "Télécharger"
+    },
+    "hero": {
+      "title": "Votre Compagnon n°1 de Santé d'Urgence",
+      "subtitle": "Connectez-vous instantanément aux professionnels de santé qualifiés les plus proches",
+      "downloadApp": "Télécharger"
+    },
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Une gamme complète pour une assistance rapide",
+      "location": "Localisation d'agents",
+      "locationDesc": "Trouvez rapidement les professionnels de santé",
+      "contact": "Mise en relation directe",
+      "profile": "Profil médical partagé",
+      "tracking": "Suivi personnalisé",
+      "emergency": "Assistance rapide"
+    },
+    "testimonials": {
+      "title": "Ce que disent nos utilisateurs",
+      "subtitle": "Découvrez les expériences de ceux qui ont utilisé Osecour en situation d'urgence",
+      "user": "Utilisateur",
+      "doctor": "Médecin",
+      "nurse": "Infirmière"
+    },
+    "app": {
+      "title": "Application mobile pour une assistance d'urgence immédiate",
+      "description": "Notre application Ôsecour est conçue pour vous mettre en relation avec des agents de santé qualifiés prêts à intervenir rapidement en cas d'urgence. Interface intuitive, fonctionnalités essentielles, tout a été pensé pour garantir une assistance immédiate."
+    },
+    "map": {
+      "title": "Agents de santé à proximité",
+      "subtitle": "Visualisez les professionnels disponibles",
+      "doctors": "Médecins",
+      "nurses": "Infirmiers",
+      "instruction": "Cliquez sur un marqueur pour les détails",
+      "contact": "Contacter"
+    },
+    "cta": {
+      "title": "Prêt à recevoir une assistance rapide en cas d'urgence ?",
+      "subtitle": "Téléchargez Ôsecour dès maintenant et accédez à un réseau de professionnels de santé qualifiés, prêts à intervenir rapidement pour chaque urgence signalée."
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "subtitle": "Vous avez des questions ou besoin d'informations supplémentaires ? N'hésitez pas à nous contacter. Les agents de santé souhaitant rejoindre notre plateforme sont également les bienvenus.",
+      "formTitle": "Envoyer nous un message",
+      "infoTitle": "Coordonnées",
+      "agentTitle": "Devenir Agent",
+      "benefit1": "Augmentez votre visibilité",
+      "benefit2": "Gestion simplifiée",
+      "benefit3": "Paiements sécurisés",
+      "ctaButton": "Rejoindre notre réseau"
+    },
+    "footer": {
+      "rights": "Tous droits réservés",
+      "privacy": "Confidentialité",
+      "terms": "Conditions d'utilisation"
+    },
+    "errors": {
+      "required": "Ce champ est requis",
+      "email": "Email invalide",
+      "phone": "Format de téléphone incorrect"
+    },
+    "register": {
+      "Title": "Devenez Agent Partenaire",
+      "frais": " Frais d'inscription unique : 10 000 FCFA",
+      "delais": "Délai moyen de traitement : 3-5 jours ouvrés ",
+      "Subtitle": "Rejoignez notre réseau de professionnels de santé en 03 étapes et augmentez votre visibilité tout en sauvant des vies",
+      "avantage":{
+        "title": "Pourquoi nous rejoindre ?",
+        "h1": "Visibilité accrue",
+        "p1": "Apparaissez dans les recherches de patients",
+        "h2": "Sécurité garantie",
+        "p2": "Paiements sécurisé et hebdomadaire",
+        "h3": "Gestion simplifiée",
+        "p3": "Outils de gestion des interventions"
+      }
+    },
+    "lastName": "Prénom (s)",
+    "firstName": "Nom (s)",
+    "email": "Email",
+    "phone": "Téléphone: +2376xxxxxxx",
+    "address": "Lieu de Résidence",
+    "specialty": "Spécialité",
+    "professionalCarte": "Carte Professionnelle (license)"
+  }

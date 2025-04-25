@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Impulse-blanc.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ôsecour - Assistance Médicale d'Urgence</title>
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+      /* Reset et styles globaux */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+          line-height: 1.6;
+          color: #333;
+      }
+
+      .section {
+          padding: 5rem 8%;
+      }
+
+      .btn {
+          display: inline-block;
+          padding: 12px 30px;
+          border-radius: 25px;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s;
+      }
+
+    
+      /* Section Services */
+      .services-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          margin-top: 3rem;
+      }
+
+      .service-card {
+          padding: 2rem;
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+
+      /* Section App */
+      .app-section {
+          background: #f8f9fa;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          gap: 4rem;
+      }
+
+      .app-download img {
+          height: 45px;
+          margin-right: 1rem;
+      }
+
+      /* Section Carte */
+      .map-section {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 3rem;
+      }
+
+      /* Témoignages */
+      .testimonials-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+      }
+
+      .testimonial-card {
+          background: white;
+          padding: 2rem;
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+
+      /* CTA Section */
+      .cta-section {
+          background: #28a745;
+          color: white;
+          text-align: center;
+          padding: 4rem 8%;
+      }
+
+      /* Contact Section */
+      .contact-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 1rem;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+      }
+
+      /* Footer */
+      footer {
+          background: #2c3e50;
+          color: white;
+          padding: 4rem 8%;
+      }
+
+      .footer-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 3rem;
+      }
+  </style>
+    <title>Ôsecour</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- <script src="/src/carousel.js" defer></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Votre script d'initialisation -->
+    <script src="/src/app.js"></script>
+  </body>
+</html>

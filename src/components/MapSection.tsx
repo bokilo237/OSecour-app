@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
-import L from 'leaflet';
+import * as L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 
@@ -43,8 +43,11 @@ const agents = [
   { name: "Inf. Mbappe Roger", type: "nurse", position: [4.055, 9.765], specialty: "Infirmier bloc opératoire" },
   { name: "Dr. Nkoulou Élise", type: "specialist", position: [4.040, 9.780], specialty: "Dermatologue" }
 ];
+interface MapControllerProps {
+  center: L.LatLngExpression ;
+}
 
-function MapController({ center }) {
+function MapController({ center }: MapControllerProps) {
   const map = useMap();
   map.setView(center, map.getZoom());
   return null;
@@ -126,7 +129,7 @@ export default function HealthMap() {
           className="h-full w-full rounded-lg"
         >
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">Map</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
 

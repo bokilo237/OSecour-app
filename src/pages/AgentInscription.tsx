@@ -17,7 +17,7 @@ const AgentInscription = () => {
     license: '',
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   /* const [files, setFiles] = useState({
     professionalCard: null,
     certifications: null,
@@ -42,7 +42,9 @@ const AgentInscription = () => {
   }; */
   
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>, field: string) => {
-    // Gestion des fichiers
+    if (e.target.files) {
+      setFormData(prev => ({ ...prev, [field]: e.target.files![0] }));
+    }
   };
   
   return (

@@ -82,7 +82,7 @@ const Home = () => {
       setCurrentSlide((prev) => (prev + 1) % phoneScreens.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [phoneScreens.length]);
 
 
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -13,12 +13,11 @@ const Header = () => {
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
-          
-          <a href="#services" className="nav-link">Services</a>
-          <a href="#app" className="nav-link">Application</a>
-          <a href="#map" className="nav-link">Carte</a>
-          <a href="#testimonials" className="nav-link">Témoignages</a>
-          <a href="#contact" className="nav-link">Contact</a>
+          <Link to="/#services" className="nav-link">Services</Link>
+          <Link to="/#app" className="nav-link">Application</Link>
+          <Link to="/#map" className="nav-link">Carte</Link>
+          <Link to="/#testimonials" className="nav-link">Témoignages</Link>
+          <Link to="/#contact" className="nav-link">Contact</Link>
           {/* <Link to="#services" className="nav-link">Services</Link>
           <Link to="#app" className="nav-link">Application</Link> */}
           <Link to="/inscription-agent" className="nav-link">Devenir Agent</Link>

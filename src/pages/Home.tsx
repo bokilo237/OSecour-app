@@ -211,7 +211,7 @@ const Home = () => {
       </section>
 
       {/* Section Carte */}
-      <div className="container mx-auto p-4">
+      <div id='map' className="container mx-auto p-4">
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
           Trouvez les agents de santé à proximité pour une intervention d'urgence rapide

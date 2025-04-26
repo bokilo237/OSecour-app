@@ -1,42 +1,112 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactSection = () => {
-  const { t } = useTranslation();
+  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+  const RECAPTCHA_SITE_KEY = import.meta.env.VITE_SITE_KEY;
+  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY_USER_ID;
 
+  const { t } = useTranslation();
+  const form = useRef<HTMLFormElement>(null);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  
+
+  const handleSubmit = async (e: React.FormEvent) => {
+
+    e.preventDefault();
+    // Ajoutez cette vérification
+    if (!form.current?.checkValidity()) {
+      form.current?.reportValidity(); // Affiche les messages natifs
+      return;
+    }
+  
+    // Vérification reCAPTCHA existante
+    if (!recaptchaToken) {
+      alert("Veuillez vérifier que vous n'êtes pas un robot");
+      return;
+    }
+  
+    setStatus('sending');
+
+    try {
+      await emailjs.sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        form.current!,
+        PUBLIC_KEY
+      );
+      
+      setStatus('sent');
+      form.current?.reset();
+      setTimeout(() => setStatus('idle'), 5000);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
+  };
+    
   return(
-    <section id="contact" className="contact-section">
+    <div id='contact' className="contact-section">
       <h1>{t('contact.title')}</h1>
       <p className="subtitle">{t('contact.subtitle')}</p>
+
+      <div className='Msgvalidation'>
+        {status === 'sent' && <div className="success-message"> {t('contact.successMessage')} </div>}
+        {status === 'error' && <div className="error-message">{t('contact.errorMessage')} </div>}
+      </div>
+
       <div className="contact-container">
         {/* Partie Formulaire */}
         <div className="contact-form"> 
           <div className="form-section">
             <h3>{t('contact.formTitle')}</h3>
-            <form onSubmit={(e) => e.preventDefault()} className="space-y-5 mt-12 lg:pb-12">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-5 mt-12 lg:pb-12">
               <div className="form-group">
                 <div>
                   <label className="block text-gray-700 mb-2">Nom complet *</label>
-                  <input type="text" required className="form-input" placeholder="Entrez votre nom complet"/>
+                  <input name='from_name' type="text" required className="form-input" placeholder="Entrez votre nom complet"/>
                 </div>
                 <div>
                   <label className="block text-gray-700 mb-2">Email *</label>
-                  <input type="email" required className="form-input" />
+                  <input name='from_email' type="email" required placeholder="exemple@email.com" className="form-input" />
                 </div>
               </div>
     
-              <div className="form-group">
+              <div>
                 <label>Objet  *</label>
-                <input type="text" required placeholder="Objet du message"/>
+                <input name='subject' type="text" required placeholder="Objet du message"/>
               </div>
     
-              <div className="form-group">
+              <div>
                 <label>Message *</label>
-                <textarea required rows={5} placeholder="Écrivez votre message ici..."></textarea>
+                <textarea name='message' required rows={5} placeholder="Écrivez votre message ici..."></textarea>
+              </div>
+                      
+              {/* reCAPTCHA et champ caché */}
+              <input type="hidden" name="g-recaptcha-response" value={recaptchaToken || ''} />
+              <ReCAPTCHA sitekey={RECAPTCHA_SITE_KEY} onChange={token => setRecaptchaToken(token)} />
+
+              {/* Feedback utilisateur */}
+              <div className='Msgvalidation'>
+                {status === 'sent' && <div className="success-message"> {t('contact.successMessage')} Message envoyé !</div>}
+                {status === 'error' && <div className="error-message">Erreur lors de l'envoi</div>}
               </div>
 
-              <button type="submit" className="submit-btn bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 !rounded-button whitespace-nowrap cursor-pointer">
-                <i className="fa-solid fa-paper-plane mr-2"></i> Envoyer le message
+              <button type="submit" disabled={status === 'sending' || !recaptchaToken} className="submit-btn bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 !rounded-button whitespace-nowrap cursor-pointer">
+                {status === 'sending' ? (
+                    <span>Envoi en cours...</span>
+                  ) : (
+                    <>
+                      <i className="fa-solid fa-paper-plane mr-2"></i>
+                      Envoyer le message
+                    </>
+                  )}
               </button>
             </form>
           </div>
@@ -94,7 +164,7 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

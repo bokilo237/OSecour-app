@@ -30,12 +30,12 @@ const Footer = () => (
       <div className='footer-links'>
         <h4 className="text-lg font-semibold "><u>Liens rapides</u></h4>
         <ul>
-          <li><a href="#" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Accueil</a></li>
-          <li><a href="#services" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Services</a></li>
-          <li><a href="#app" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Application</a></li>
-          <li><a href="#map" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Carte</a></li>
-          <li><a href="#testimonials" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Témoignages</a></li>
-          <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Contact</a></li>
+          <li><a href="/" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Accueil</a></li>
+          <li><a href="/#services" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Services</a></li>
+          <li><a href="/#app" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Application</a></li>
+          <li><a href="/#map" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Carte</a></li>
+          <li><a href="/#testimonials" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Témoignages</a></li>
+          <li><a href="/#contact" className="text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer">Contact</a></li>
           <li><Link to="/inscription-agent" className="footer-link">Devenir Agent</Link></li>
         </ul>
       </div>

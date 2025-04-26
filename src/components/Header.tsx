@@ -13,14 +13,14 @@ const Header = () => {
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/#services" className="nav-link">Services</Link>
-          <Link to="/#app" className="nav-link">Application</Link>
-          <Link to="/#map" className="nav-link">Carte</Link>
-          <Link to="/#testimonials" className="nav-link">Témoignages</Link>
-          <Link to="/#contact" className="nav-link">Contact</Link>
-          {/* <Link to="#services" className="nav-link">Services</Link>
-          <Link to="#app" className="nav-link">Application</Link> */}
-          <Link to="/inscription-agent" className="nav-link">Devenir Agent</Link>
+          <a href="/#services" className="nav-link">Services</a>
+          <a href="/#app" className="nav-link">Application</a>
+          <a href="/#map" className="nav-link">Carte</a>
+          <a href="/#testimonials" className="nav-link">Témoignages</a>
+          <a href="/#contact" className="nav-link">Contact</a>
+          {/* <a href="#services" className="nav-link">Services</a>
+          <a href="#app" className="nav-link">Application</a> */}
+          <a href="/inscription-agent" className="nav-link">Devenir Agent</a>
           <button className="cta-button bg-blue-600 text-white px-6 py-2 rounded">
             Télécharger
           </button>
@@ -39,9 +39,9 @@ const Header = () => {
             <a href="#map" className="nav-link">Carte</a>
             <a href="#testimonials" className="nav-link">Témoignages</a>
             <a href="#contact" className="nav-link">Contact</a>
-            {/* <a href="#services" className="nav-link">Services</Link>
-            <Link to="#app" className="nav-link">Application</Link> */}
-            <Link to="/inscription-agent" className="nav-link">Devenir Agent</Link>
+            {/* <a href="#services" className="nav-link">Services</a>
+            <Link to="#app" className="nav-link">Application</a> */}
+            <a href="/inscription-agent" className="nav-link">Devenir Agent</a>
             <button className="cta-button bg-blue-600 text-white px-6 py-2 rounded">
               Télécharger
             </button>

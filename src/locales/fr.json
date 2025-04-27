@@ -77,7 +77,8 @@
       "avantage":{
         "title": "Pourquoi nous rejoindre ?",
         "h1": "Visibilité accrue",
-        "p1": "Apparaissez dans les recherches de patients",
+        "p1": "Apparaissez dans les recherches de patients,",
+        "p1-": "plus vous etes disponible plus vous avez des interventions",
         "h2": "Sécurité garantie",
         "p2": "Paiements sécurisé et hebdomadaire",
         "h3": "Gestion simplifiée",

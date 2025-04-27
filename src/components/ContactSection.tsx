@@ -94,7 +94,7 @@ const ContactSection = () => {
 
               {/* Feedback utilisateur */}
               <div className='Msgvalidation'>
-                {status === 'sent' && <div className="success-message"> {t('contact.successMessage')} Message envoyé !</div>}
+                {status === 'sent' && <div className="success-message"> {t('contact.successMessage')}</div>}
                 {status === 'error' && <div className="error-message">Erreur lors de l'envoi</div>}
               </div>
 
